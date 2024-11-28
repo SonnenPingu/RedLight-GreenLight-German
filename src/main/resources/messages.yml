@@ -1,0 +1,91 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                                   ----[RedLight-GreenLight]----                                   #
+#                                     ----[By Loving11ish]----                                      #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                                  ----[Plugin-Nachrichtendatei]----                                #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#RedLightGreenLight-Nachrichten für Version: 2.6.0-ALPHA-01 
+
+#Präfix für alle Nachrichten.
+prefix: "&f[&4&lRL&r&c-&a&lGL&f]"
+
+#Spiel-Nachrichten
+joined-game: "&aDu bist dem Spiel beigetreten.\n&aBereite dich darauf vor, dich nur zu bewegen, wenn es erlaubt ist!"
+command-send-error: "&cEntschuldigung, dieser Befehl kann während des Spiels nicht ausgeführt werden!"
+failed-join-arena: "&cDu bist bereits Teil eines Spiels.\n&cNutze &e/redlight leave &cum in die Hauptlobby zurückzukehren."
+successful-leave-game: "&aDu hast das Spiel verlassen und wurdest zurück in die Lobby teleportiert!"
+player-not-in-game: "&cDu bist momentan in keinem Spiel!"
+waiting-for-enough-players: "&eDu bist jetzt in der Warteschlange, um zu spielen.&r\n&eWarte jetzt auf genügend Spieler, um das Spiel zu starten.&r\n&eNutze &b/redlight leave &eum das Spiel zu verlassen."
+game-already-running: "&cEntschuldigung, ein Spiel läuft bereits!"
+no-game-running: "&cEntschuldigung, es läuft momentan kein Spiel!"
+spectating-message: "&aDu beobachtest nun die Arena! \n&aNutze &b/redlight leave &aum zum Spawn zurückzukehren."
+
+round-end-title: "&eNiemand hat das Spiel gewonnen!"
+round-end-subtitle: "&a&lGG an alle"
+
+greenLight-message: "&aGrünes Licht"
+#Möchtest du, dass die Nachricht "Rotes Licht" als Titel und im Chat gesendet wird?
+redLight-title-enable: true
+redLight-message: "&cRotes Licht"
+
+game-start-title: "&a&lLasst das Rennen beginnen!"
+game-start-subtitle: "&bSchlage alle bis zur Ziellinie!"
+
+game-win-title: "&6&lHerzlichen Glückwunsch! Du hast es geschafft!"
+game-win-subtitle: "&bWarten wir mal ab, wer sich dir anschließt."
+
+game-loose-title: "&c&lOOF Du hast dich nicht still gehalten!"
+game-loose-subtitle: "&4Viel Glück beim nächsten Mal!"
+
+#Möchtest du, dass den Spielern ein Titel angezeigt wird, wenn sie das Spiel verlassen?
+show-leave-game-title: false
+game-leave-title: "&a&lDu hast das Spiel verlassen!"
+game-leave-subtitle: "&eVielen Dank fürs Spielen!"
+
+#Falsche Befehls-Syntax-Konsole:
+console-syntax-error:
+  - "&4Bitte gib ein Argument an!\n"
+  - "&4redlight reload\n"
+  - "&4redlight help\n"
+
+plugin-reload-beginning: "&aPlugin-Neuladen wird gestartet..."
+plugin-reload-successful: "&aPlugin-Neuladen abgeschlossen!"
+disabled-world-message: "&4&lRedLight&r&c-&a&lGreenLight wurde in dieser Welt deaktiviert."
+no-permission: "&cDu hast keine Berechtigung, dies zu tun!"
+unknown-command: "&cBefehl nicht gefunden! Nutze &e/redlight help."
+
+#Plugin-Update-Nachrichten:
+update-available:
+  1: "&4*-------------------------------------------*"
+  2: "&cEine neue Version ist verfügbar!"
+  3: "&4*-------------------------------------------*"
+no-update-available:
+  1: "&a*-------------------------------------------*"
+  2: "&aDas Plugin ist auf dem neuesten Stand!"
+  3: "&a*-------------------------------------------*"
+update-check-failure: "&4Update-Überprüfung fehlgeschlagen! - &c"
+
+#Plugin-Hilfe-Nachrichten:
+help-command:
+  - "&e[--------------- &b[RedLight-GreenLight] &e----------------]\n"
+  - "&f/red join &7- &dDieser Befehl tritt dem Spiel bei.\n"
+  - "&f/red leave &7- &dDieser Befehl verlässt das Spiel.\n"
+  - "&f/red joinall &7- &dDieser Befehl fügt alle Spieler dem Spiel hinzu.\n"
+  - "&f/red leaveall &7- &dDieser Befehl zwingt alle Spieler, das Spiel zu verlassen.\n"
+  - "&f/red help &7- &dDieser Befehl zeigt dieses Hilfemenü an.\n"
+  - "&f/red reload &7- &dDieser Befehl lädt die Konfiguration neu.\n"
+  - "&e[------------------- &bBerechtigungen &e---------------------]\n"
+  - "&fredlight.*\n"
+  - "&fredlight.help\n"
+  - "&fredlight.reload\n"
+  - "&fredlight.command.joinall\n"
+  - "&fredlight.command.leaveall\n"
+  - "&fredlight.bypass.joinwipe\n"
+  - "&fredlight.bypass.commands\n"
+  - "&fredlight.bypass.gamemode\n"
+  - "&e[---------------------------------------------------]\n"
+  - "&fPlugin-Version: &a%version%\n"
+  - "&e[---------------------------------------------------]"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
