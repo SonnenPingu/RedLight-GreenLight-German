@@ -20,6 +20,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+private File messagesFile;
+private FileConfiguration messagesConfig;
+
+/*** Loads the language file based on the configuration.
+ */
+public void loadMessagesConfig() {
+    String language = getConfig().getString("language", "en").toLowerCase();
+
+    // Select file based on the language
+    messagesFile = new File(getDataFolder(), "messages_" + language + ".yml");
+
+    // If the file does not exist, copy it from the resources
+    if (!messagesFile.exists()) {
+        saveResource("messages_" + language + ".yml", false);
+    }
+
+    // Load file
+    messagesConfig = YamlConfiguration.loadConfiguration(messagesFile);
+}
+
+/**
+ * Returns the language file configuration.
+ */
+public FileConfiguration getMessagesConfig() {
+    return messagesConfig;
+}
+
 public final class RedLightGreenLight extends JavaPlugin {
 
     ConsoleCommandSender console = Bukkit.getConsoleSender();
@@ -41,6 +68,16 @@ public final class RedLightGreenLight extends JavaPlugin {
         versionCheckerUtils = new VersionCheckerUtils();
         versionCheckerUtils.setVersion();
 
+ // Loading the main configuration file
+    getConfig().options().copyDefaults(true);
+    saveDefaultConfig();
+
+    // Loading the language file
+    loadMessagesConfig();
+
+    // Plugin start messages based on the language file
+    console.sendMessage(ColorUtils.translateColorCodes(getMessagesConfig().getString("prefix") + "Plugin erfolgreich gestartet!"));
+}
         //Server version compatibility check
         if (getVersionCheckerUtils().getVersion() < 13||getVersionCheckerUtils().getVersion() > 20){
             console.sendMessage(ColorUtils.translateColorCodes("&4-------------------------------------------"));
