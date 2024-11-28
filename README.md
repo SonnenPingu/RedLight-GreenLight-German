@@ -1,3 +1,7 @@
+The plugin will soon be available in multiple languages.
+
+Most of the code has been removed and only the changes are available.
+
 # RedLight-GreenLight
 A mini game based on the Netflix Squid Game
 
