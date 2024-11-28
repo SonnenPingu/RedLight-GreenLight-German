@@ -8,6 +8,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #RedLightGreenLight config for version: ${project.version}
 
+#Language selection:
+language: en # Possible values: ‘en’ for English, ‘de’ for German
+
 #Do you want players inventories to be wiped on join?
 #This can bypassed using permission node 'redlight.bypass.joinwipe'
 Wipe-inventory-on-join: false
